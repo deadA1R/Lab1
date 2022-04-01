@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class DigitChecker {
     public static boolean digitChecker(String S, int i){
         char ch = S.charAt(i);
-        if(Character.isLetter(ch)){
-            return false;
-        }
-        if(i==0){
+        if (i==0){
             return true;
         }
-        return digitChecker(S,i-1);
+        if(Character.isDigit(ch)){
+            return digitChecker(S,i-1);
+        }
+        else{
+            return false;
+        }
+
     }
 
     public static void main(String[] args) {
