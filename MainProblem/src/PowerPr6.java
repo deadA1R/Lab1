@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class PowerPr6 {
     public static int powerN(int A, int N){
-        if (N <= 0){
+        if (N == 0){
             return 1;
         }
         return powerN(A, N-1) * A;
